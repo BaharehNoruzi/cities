@@ -85,24 +85,48 @@
     <section>
         <nav>
             <ul>
-                <li><a href="#">London</a></li>
-                <li><a href="#">Paris</a></li>
-                <li><a href="#">Tokyo</a></li>
+                <li><a href="#" onclick="getlondon()">London</a></li>
+                <li><a href="#" onclick="getparis()">Paris</a></li>
+                <li><a href="#" onclick="gettokyo()">Tokyo</a></li>
             </ul>
         </nav>
 
         <article>
-            <h1>London</h1>
-            <p>London is the capital city of England. It is the most populous city in the United Kingdom, with a
-                metropolitan area of over 13 million inhabitants.</p>
-            <p>Standing on the River Thames, London has been a major settlement for two millennia, its history going
-                back to its founding by the Romans, who named it Londinium.</p>
+            <h1 id="cityname"></h1>
+            <p id="desc"></p>
         </article>
     </section>
 
     <footer>
         <p>Footer</p>
     </footer>
+
+    <script>
+        
+        let london = ["London", "London is the capital city of England.It is the most populous city in the United Kingdom, with ametropolitan area of over 13 million inhabitants. <br> Standing on the <b>River Thames</b>, London has been a major settlement for two millennia, its history goingback to its founding by the Romans, who named it Londinium."];
+        let paris = ["Paris", "Paris, France's capital, is a major European city and a global center for art, fashion, gastronomy and culture. Its 19th-century cityscape is crisscrossed by wide boulevards and the River Seine."];
+        let tokyo = ["Tokyo", "Tokyo, Japan’s busy capital, mixes the ultramodern and the traditional, from neon-lit skyscrapers to historic temples. The opulent Meiji Shinto Shrine is known for its towering gate and surrounding woods."];
+
+        let cityname=document.getElementById("cityname");
+        let description=document.getElementById("desc");
+        function getlondon() {
+            cityname.innerHTML=london[0];
+            description.innerHTML=london[1];
+        }
+        getlondon();
+
+        function getparis() {
+            cityname.innerHTML=paris[0];
+            description.innerHTML=paris[1];
+        }
+
+        function gettokyo() {
+            cityname.innerHTML=tokyo[0];
+            description.innerHTML=tokyo[1];
+        }
+
+
+    </script>
 
 </body>
 
